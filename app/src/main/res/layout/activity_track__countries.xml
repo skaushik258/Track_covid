@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Activities.Track_Countries"
+    android:orientation="vertical"
+    android:background="@color/color_white"
+    >
+
+    <EditText
+        android:id="@+id/country_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="search"
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:drawablePadding="15dp"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:maxLines="1"
+        >
+    </EditText>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/country_recycle"
+       android:layout_below="@+id/country_edittext"
+       android:layout_margin="10dp"
+       >
+
+   </androidx.recyclerview.widget.RecyclerView>
+
+    <com.leo.simplearcloader.SimpleArcLoader
+        android:id="@+id/country_loader"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        app:arc_style="simple_arc"
+        android:visibility="visible"
+        />
+
+
+
+</RelativeLayout>
